@@ -7,11 +7,14 @@ browser = webdriver.Chrome()
 browser.get(url)
 browser.maximize_window()
 
-user_name = browser.find_element(By.ID, "user-name")
-user_name.send_keys("standard_user")
+login = "standard_user"
+password = "secret_sauce"
 
-password = browser.find_element(By.ID, "password")
-password.send_keys("secret_sauce")
+user_name = browser.find_element(By.ID, "user-name")
+user_name.send_keys(login)
+
+password_field = browser.find_element(By.ID, "password")
+password_field.send_keys(password)
 time.sleep(2)
 
 login = browser.find_element(By.ID, "login-button")
