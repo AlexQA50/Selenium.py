@@ -30,9 +30,15 @@ value_text_products = text_products.text
 print(value_text_products)
 
 
-# check assert and print in terminal
+# check assert and print in terminal (text)
 assert value_text_products == "Products"
 print("Verification passed")
+
+# check assert and print in terminal (url)
+url_products = "https://www.saucedemo.com/inventory.html"
+get_url_products = browser.current_url
+assert get_url_products == url_products
+print("Right page!")
 
 while True:
     pass
